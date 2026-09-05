@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Terms of Privacy</title>
+  <link rel="icon" href="src/images/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; padding: 2rem; }
+    p { margin: 10px; }
+  </style>
+</head>
+<body>
+<h3 class="fs-1 fs-md-3 fs-lg-5">Terms of Privacy</h3>
+<h4 class="fs-1 fs-md-3 fs-lg-5">General</h4>
+<h5 class="fs-1 fs-md-3 fs-lg-5">(Version: 2026-001)</h5>
+<p class="fs-1 fs-md-3 fs-lg-5">The service is provided solely by www.hostname.com (following - Service provider).</p>
+<p class="fs-1 fs-md-3 fs-lg-5">For the provision of the service the e-mail address of a client is needed. An e-mail address are used for securely accessing this service, limiting a breach of the terms of service. The following information are collected during registration for this service: client's first name, client's last name, client's provided username & password. A password of a client is stored only in a hashed form after applying modern hashing algorithm.</p>
+<h4 class="fs-1 fs-md-3 fs-lg-5">Service</h4>
+<p class="fs-1 fs-md-3 fs-lg-5">The service shall not disclose and shall not share with third parties any information related to a client, unless it would be required by the Law.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">The service keeps information provided by a client for a minimum duration of five years.</p>
+<h4 class="fs-1 fs-md-3 fs-lg-5">Client</h4>
+<p class="fs-1 fs-md-3 fs-lg-5">A client has the right to address the Service provider regarding information about client, that are stored in the service.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">A client has the right to request the Service provider for changes, removal of client's information.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">A client must not overshare his own information while using this service.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">A client may contact the Service provider regarding the service. The Service provider's e-mail address: <a class="email-link" data-user="support" data-domain="hostname.com">e-mail address</a>.</p>
+<p><a href="Login.php" target="_SELF"><i class="bi bi-arrow-return-left"></i></a></p>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.email-link');
+
+    links.forEach(link => {
+      const user = link.getAttribute('data-user');
+      const domain = link.getAttribute('data-domain');
+      if (!user || !domain) return;
+
+      const address = user + '@' + domain;
+      link.href = 'mailto:' + address;
+
+      if (!link.textContent.trim()) {
+        link.textContent = address;
+      }
+    });
+  });
+</script>
+</body>
+</html>

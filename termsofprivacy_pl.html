@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Warunki prywatności</title>
+  <link rel="icon" href="src/images/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; padding: 2rem; }
+    p { margin: 10px; }
+  </style>
+</head>
+<body>
+<h3 class="fs-1 fs-md-3 fs-lg-5">Warunki prywatności</h3>
+<h4 class="fs-1 fs-md-3 fs-lg-5">Ogólny</h4>
+<h5 class="fs-1 fs-md-3 fs-lg-5">(Wersja: 2026-001)</h5>
+<p class="fs-1 fs-md-3 fs-lg-5">Usługa jest świadczona wyłącznie przez www.hostname.com (dalej - Usługodawca).</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Do świadczenia usługi potrzebny jest adres e-mail klienta. Adres e-mail jest używany do bezpiecznego dostępu do tej usługi, ograniczając naruszenie warunków świadczenia usług. Podczas rejestracji w tej usłudze gromadzone są następujące informacje: imię klienta, nazwisko klienta, podana nazwa użytkownika i hasło klienta. Hasło klienta jest przechowywane tylko w formie skróconej po zastosowaniu nowoczesnego algorytmu skrótu.</p>
+<h4 class="fs-1 fs-md-3 fs-lg-5">Usługa</h4>
+<p class="fs-1 fs-md-3 fs-lg-5">Usługodawca nie ujawnia i nie udostępnia osobom trzecim informacji dotyczących klienta, chyba że jest do tego zobowiązany na mocy ustawy prawo.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Usługa przechowuje informacje dostarczone przez klienta przez minimalny okres pięciu lat.</p>
+<h4 class="fs-1 fs-md-3 fs-lg-5">Klienta</h4>
+<p class="fs-1 fs-md-3 fs-lg-5">Klient ma prawo zwrócić się do Usługodawca w sprawie informacji o kliencie, które są przechowywane w usłudze.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Klient ma prawo wystąpić do Usługodawca o usunięcie informacji o kliencie.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Klient nie może udostępniać zbyt wielu informacji o sobie podczas korzystania z tej usługi.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Klient może kontaktować się z Usługodawcą w sprawie usługi. Adres email Usługodawcy: <a class="email-link" data-user="support" data-domain="hostname.com">adres e-maila</a>.</p>
+<p><a href="Login.php" target="_SELF"><i class="bi bi-arrow-return-left"></i></a></p>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.email-link');
+
+    links.forEach(link => {
+      const user = link.getAttribute('data-user');
+      const domain = link.getAttribute('data-domain');
+      if (!user || !domain) return;
+
+      const address = user + '@' + domain;
+      link.href = 'mailto:' + address;
+
+      if (!link.textContent.trim()) {
+        link.textContent = address;
+      }
+    });
+  });
+</script>
+</body>
+</html>

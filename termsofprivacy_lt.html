@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Privatumo sąlygos</title>
+  <link rel="icon" href="src/images/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; padding: 2rem; }
+    p { margin: 10px; }
+  </style>
+</head>
+<body>
+<h3 class="fs-1 fs-md-3 fs-lg-5">Privatumo sąlygos</h3>
+<h4 class="fs-1 fs-md-3 fs-lg-5">Bendrosios</h4>
+<h5 class="fs-1 fs-md-3 fs-lg-5">(Versija: 2026-001)</h5>
+<p class="fs-1 fs-md-3 fs-lg-5">Paslaugą teikia tik www.hostname.com (toliau – Paslaugos teikėjas).</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Paslaugos teikimui reikalingas kliento el. pašto adresas. El. pašto adresas naudojamas saugiam prisijungimui prie šios paslaugos, ribojant paslaugos teikimo sąlygų pažeidimą. Registracijos metu šiai paslaugai gauti renkama ši informacija: kliento vardas, kliento pavardė, kliento pateiktas vartotojo vardas ir slaptažodis. Kliento slaptažodis saugomas tik užšifruota forma pritaikius modernų šifravimo algoritmą.</p>
+<h4 class="fs-1 fs-md-3 fs-lg-5">Paslaugos</h4>
+<p class="fs-1 fs-md-3 fs-lg-5">Paslauga neatskleidžia ir nesidalija su trečiosiomis šalimis jokia su klientu susijusia informacija, nebent to reikalautų įstatymas.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Paslauga saugo kliento pateiktą informaciją ne trumpiau kaip penkerius metus.</p>
+<h4 class="fs-1 fs-md-3 fs-lg-5">Kliento</h4>
+<p class="fs-1 fs-md-3 fs-lg-5">Klientas turi teisę kreiptis į Paslaugų teikėją dėl informacijos apie klientą, kuri yra saugoma paslaugoje.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Klientas turi teisę reikalauti, kad Paslaugų teikėjas pašalintų kliento informaciją.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Klientas, naudodamasis šia paslauga, neturi persidalinti savo informacija.</p>
+<p class="fs-1 fs-md-3 fs-lg-5">Klientas dėl paslaugos gali kreiptis į Paslaugos teikėją. Paslaugos teikėjo el. pašto adresas: <a class="email-link" data-user="support" data-domain="hostname.com">el. pašto adresas</a>.</p>
+<p><a href="Login.php" target="_SELF"><i class="bi bi-arrow-return-left"></i></a></p>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.email-link');
+
+    links.forEach(link => {
+      const user = link.getAttribute('data-user');
+      const domain = link.getAttribute('data-domain');
+      if (!user || !domain) return;
+
+      const address = user + '@' + domain;
+      link.href = 'mailto:' + address;
+
+      if (!link.textContent.trim()) {
+        link.textContent = address;
+      }
+    });
+  });
+</script>
+</body>
+</html>
